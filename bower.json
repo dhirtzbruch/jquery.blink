@@ -1,0 +1,16 @@
+{
+  "name": "jquery.blink",
+  "description" : "Blink plugin for jQuery",
+  "version": "1.1.0",
+  "homepage": "https://github.com/dhirtzbruch/jquery.blink",
+  "authors": [
+    "johnboker (https://github.com/johnboker/)",
+    "dhirtzbruch <dev@dhirtzbruch.de>"
+  ],
+  "main": [
+    "jquery.blink.js"
+  ],
+  "ignore": [],
+  "dependencies": {}
+}
+

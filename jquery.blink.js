@@ -1,16 +1,19 @@
 (function ($) {
-	$.fn.blink = function (options) {
-		var defaults = { delay: 500 };
-		var options = $.extend(defaults, options);
-		return $(this).each(function (idx, itm) {
-			setInterval(function () {
-				if ($(itm).css("visibility") === "visible") {
-					$(itm).css('visibility', 'hidden');
-				}
-				else {
-					$(itm).css('visibility', 'visible');
-				}
-			}, options.delay);
-		});
-	}
-} (jQuery))
+
+    $.fn.blink = function (options) {
+        var settings = $.extend({
+            delay: 500
+        }, options);
+
+        return $(this).each(function (index, item) {
+            setInterval(function () {
+                if ($(item).css('visibility') === 'visible') {
+                    $(item).css('visibility', 'hidden');
+                }
+                else {
+                    $(item).css('visibility', 'visible');
+                }
+            }, settings.delay);
+        });
+    }
+}(jQuery));
