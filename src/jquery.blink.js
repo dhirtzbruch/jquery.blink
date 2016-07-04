@@ -1,17 +1,33 @@
 (function ($) {
 
     $.fn.blink = function (options) {
-        var settings = $.extend({
-            delay: 500
-        }, options);
 
-        return $(this).each(function (index, item) {
+        if (typeof options === 'undefined') {
+            options = {};
+        }
+
+        // Check for data-attributes for configuring per-item.
+        // $.fn.html5data is declared in dependency jquery-html5data.
+        // Used to avoid polluting global data-attribute namespace.
+        options = $.extend(
+            this.html5data('blink'),
+            options
+        );
+
+        var settings = $.extend(
+            {
+                delay: 500
+            },
+            options
+        );
+
+        return this.each(function (index, element) {
             setInterval(function () {
-                if ($(item).css('visibility') === 'visible') {
-                    $(item).css('visibility', 'hidden');
+                if ($(element).css('visibility') === 'visible') {
+                    $(element).css('visibility', 'hidden');
                 }
                 else {
-                    $(item).css('visibility', 'visible');
+                    $(element).css('visibility', 'visible');
                 }
             }, settings.delay);
         });

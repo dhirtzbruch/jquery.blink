@@ -1,7 +1,7 @@
 {
     "name": "jquery.blink",
     "description": "Blink plugin for jQuery",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "homepage": "https://github.com/dhirtzbruch/jquery.blink",
     "authors": [
         "johnboker (https://github.com/johnboker/)",
@@ -18,7 +18,8 @@
         "tmp"
     ],
     "dependencies": {
-        "jquery": ">=2.2.3"
+        "jquery": ">=2.2.3",
+        "jquery-html5data":"https://github.com/markdalgleish/jquery-html5data.git#ec48a5fe7b107681dab2a1a3105a6595afa03cc5"
     }
 }
 
